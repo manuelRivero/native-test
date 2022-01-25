@@ -14,6 +14,7 @@ import {AuthReducer} from './store/reducer/auth';
 import {NavigationContainer} from '@react-navigation/native';
 import {AuthStack} from './navigation/AuthNavigation';
 import {Provider} from 'react-redux';
+import {AppStack} from './navigation/appNavigation';
 
 const rootReducer = combineReducers({
   auth: AuthReducer,
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <AuthStack />
+        <AppStack />
       </NavigationContainer>
     </Provider>
   );

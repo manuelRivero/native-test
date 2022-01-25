@@ -27,10 +27,14 @@ export default function Register({navigation}) {
           <Heading textAlign={'center'}>Registro de usuario</Heading>
           <Input background={'white'} placeholder="Email" width={'100%'} />
           <Input background={'white'} placeholder="Contraseña" width={'100%'} />
-          <Button m={'auto'}>Continuar</Button>
+          <Button
+            m={'auto'}
+            onPress={() => navigation.navigate('App', {screen: 'Services'})}>
+            Continuar
+          </Button>
           <Button
             variant="ghost"
-            onPress={() => navigation.navigate('Login')}
+            onPress={() => navigation.navigate('Auth', {screen: 'Login'})}
             m={'auto'}>
             Ingresar
           </Button>

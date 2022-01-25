@@ -26,6 +26,9 @@ export default function Register({navigation}) {
           space={6}>
           <Heading textAlign={'center'}>Servicios</Heading>
         </Stack>
+        <Button onPress={() => navigation.navigate('App', {screen: 'Home'})}>
+          Inicio
+        </Button>
       </Container>
     </ScrollView>
   );

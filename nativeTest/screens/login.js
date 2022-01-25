@@ -27,12 +27,14 @@ export default function Login({navigation}) {
           <Heading textAlign={'center'}>Inicia sesión</Heading>
           <Input background={'white'} placeholder="Email" width={'100%'} />
           <Input background={'white'} placeholder="Contraseña" width={'100%'} />
-          <Button onPress={() => navigation.navigate('Home')} m={'auto'}>
+          <Button
+            onPress={() => navigation.navigate('App', {screen: 'Home'})}
+            m={'auto'}>
             Continuar
           </Button>
           <Button
             variant="ghost"
-            onPress={() => navigation.navigate('Register')}
+            onPress={() => navigation.navigate('Auth', {screen: 'Register'})}
             m={'auto'}>
             Registrarse
           </Button>
